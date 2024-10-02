@@ -1,0 +1,27 @@
+int motorA1 = 8;
+int motorA2 = 7;
+int motorB1 = 5;
+int motorB2 = 4;
+int enableA = 9;
+int enableB = 10;
+
+void setup() {
+  pinMode(motorA1, OUTPUT);
+  pinMode(motorA2, OUTPUT);
+  pinMode(motorB1, OUTPUT);
+  pinMode(motorB2, OUTPUT);
+  pinMode(enableA, OUTPUT);
+  pinMode(enableB, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(motorA1, HIGH);
+  digitalWrite(motorA2, LOW);
+  digitalWrite(motorB1, LOW);
+  digitalWrite(motorB2, HIGH);
+
+  analogWrite(enableA, 200);
+  analogWrite(enableB, 200);
+  
+  delay(2000);
+}
